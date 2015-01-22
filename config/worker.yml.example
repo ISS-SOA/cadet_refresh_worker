@@ -1,0 +1,18 @@
+# Credentials for worker
+---
+defaults: &defaults
+  AWS_ACCESS_KEY_ID:
+  AWS_SECRET_ACCESS_KEY:
+  IRON_IDLE_TIMEOUT: '0'
+
+production:
+  <<: *defaults
+  AWS_REGION: us-east-1     # AWS Region: US East (N. Virginia)
+
+development:
+  <<: *defaults
+  AWS_REGION: eu-central-1  # AWS Region: EU Central (Frankfurt)
+
+test:
+  <<: *defaults
+  AWS_REGION: eu-central-1  # AWS Region: EU Central (Frankfurt)
