@@ -1,0 +1,7 @@
+runtime 'ruby', '2.1'
+
+gemfile 'Gemfile'
+file 'config/worker.yml'
+file 'worker_helpers.rb'
+
+exec 'cadet_refresh_worker.rb'
