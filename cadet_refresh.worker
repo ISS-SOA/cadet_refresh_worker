@@ -1,7 +1,10 @@
 runtime 'ruby', '2.1'
 
 gemfile 'Gemfile'
-file 'config/worker.yml'
+file 'config/worker.yml', 'config/'
 file 'worker_helpers.rb'
 
+set_env 'IRON_ENV', ENV['IRON_ENV']
+
+remote
 exec 'cadet_refresh_worker.rb'
